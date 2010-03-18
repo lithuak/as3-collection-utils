@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009" 
+			   xmlns:s="library://ns.adobe.com/flex/spark" 
+			   xmlns:mx="library://ns.adobe.com/flex/halo" minWidth="1024" minHeight="768" xmlns:flexunit="flexunit.flexui.*"    creationComplete="onCreationComplete()" >	
+<fx:Script>
+	<![CDATA[
+
+		import org.flexunit.runner.Request;
+		import tests.ListCollectionMap.LCMSuite;
+		import tests.ListCollectionMap.tests.IMXMLObjectCase;
+		import tests.ListCollectionMap.tests.GeneralCase;
+		import tests.ListCollectionMap.tests.PropertyUpdateTestCase;
+		import tests.ListCollectionMap.tests.ProxyCase;
+		import tests.ListCollectionMap.tests.IListCase;
+		import tests.ListCollectionMap.tests.IEventDispatcherCase;
+		import tests.ListCollectionMap.tests.ListUpdatesCase;
+
+		public function currentRunTestSuite():Array
+		{
+			var testsToRun:Array = new Array();
+			testsToRun.push(tests.ListCollectionMap.LCMSuite);
+			testsToRun.push(tests.ListCollectionMap.tests.IMXMLObjectCase);
+			testsToRun.push(tests.ListCollectionMap.tests.GeneralCase);
+			testsToRun.push(tests.ListCollectionMap.tests.PropertyUpdateTestCase);
+			testsToRun.push(tests.ListCollectionMap.tests.ProxyCase);
+			testsToRun.push(tests.ListCollectionMap.tests.IListCase);
+			testsToRun.push(tests.ListCollectionMap.tests.IEventDispatcherCase);
+			testsToRun.push(tests.ListCollectionMap.tests.ListUpdatesCase);
+			return testsToRun;
+		}
+		private function onCreationComplete():void
+		{
+			testRunner.runWithFlexUnit4Runner(currentRunTestSuite(), "as3CollectionUtils");
+		}
+]]>
+</fx:Script>
+<flexunit:FlexUnitTestRunnerUI id="testRunner"/>
+</s:Application>
