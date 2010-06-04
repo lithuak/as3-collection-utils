@@ -45,8 +45,8 @@ package com.oitar.collections
 
 /**
  * The ListCollectionMap lets you create the mapping of some IList object    
- * as a collection. It acts the same way as ListCollectionView, but instead
- * of sorting and filtering ListCollectionMap allows you to define
+ * as a collection. It acts in the same way as ListCollectionView, but instead
+ * of sorting and filtering objects ListCollectionMap allows you to define
  * 'map' function that will evaluate mapping opperation for each item of the source
  * list. 
  * 
@@ -54,7 +54,7 @@ package com.oitar.collections
  * with other ICollectionView and ICollectionMap objects.
  * 
  * ListCollectionMap provides read-only interface, any attempts to change
- * the resulting collection will end up throwing an exception. 
+ * the resulting collection will end up with throwing an exception. 
  * 
  * However you can change 
  * the source collection and it will make the resulting collection update automatically.     

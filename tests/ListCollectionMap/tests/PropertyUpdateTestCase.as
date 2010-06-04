@@ -1,4 +1,4 @@
-package tests.ListCollectionMap.tests
+package ListCollectionMap.tests
 {
 	import com.oitar.collections.ListCollectionMap;
 	import com.oitar.collections.ListCollectionMapResult;

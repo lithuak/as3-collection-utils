@@ -1,11 +1,11 @@
-package tests.ListCollectionMap.tests
+package ListCollectionMap.tests
 {
 	import flexunit.framework.Assert;
 	
 	import org.flexunit.assertThat;
 	import org.hamcrest.collection.array;
 	
-	import tests.ListCollectionMap.LCMTestEnvironment;
+	import ListCollectionMap.LCMTestEnvironment;
 
 	public class IListCase extends LCMTestEnvironment
 	{

@@ -1,6 +1,6 @@
-package tests.ListCollectionMap.tests
+package ListCollectionMap.tests
 {
-	import tests.ListCollectionMap.LCMTestEnvironment;
+	import ListCollectionMap.LCMTestEnvironment;
 
 	public class IMXMLObjectCase extends LCMTestEnvironment
 	{

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project name="as3CollectionUtils" basedir="." default="build">
+	<property name="FLEX_HOME" value="C:\Program Files\Adobe\Adobe Flash Builder 4\sdks\4.0.0\"/>
+	<property name="src.dir" value="src"/>
+	<property name="release.dir" value="bin"/>
+	<property name="test.dir" value="tests"/>
+	<property name="testlib.dir" value="libs"/>
+	<property name="testbox.dir" value="testbox"/>
+	<property name="asdoc.dir" value="doc"/>
+	<property name="appClasses" value="com.oitar.collections.ListCollectionMapResult com.oitar.collections.ListCollectionMap com.oitar.collections.ICollectionMap"/>
+	<property name="libname" value="as3CollectionUtils.swc"/>
+	 
+	<taskdef resource="flexTasks.tasks" classpath="${FLEX_HOME}/ant/lib/flexTasks.jar"/>
+	<taskdef  resource="flexUnitTasks.tasks" classpath="${testlib.dir}/flexUnitTasks-4.0.0.jar"/>
+	 
+	<target name="compile">
+		<compc output="bin/${libname}" include-classes="${appClasses}"> 
+			<source-path path-element="${src.dir}" />
+		</compc>
+	</target>
+ 
+	<target name="clean">
+		<delete>
+			<fileset dir="${release.dir}" includes="*"/>
+		</delete>
+	</target>
+ 
+	<target name="cleanTest">
+		<delete dir="${testbox.dir}" failOnError="false" includeEmptyDirs="true" />
+		<mkdir dir="${testbox.dir}" />
+	</target>
+	
+	<target name="compileTestRunner" depends="cleanTest">
+        <mxmlc file="${test.dir}/runner.mxml" output="${testbox.dir}/runner.swf">
+            <load-config filename="${FLEX_HOME}/frameworks/flex-config.xml"/>
+
+        	<compiler.source-path path-element="${src.dir}" />
+            
+        	<compiler.library-path dir="${release.dir}/" append="true">
+                <include name="${libname}"/>
+            </compiler.library-path>
+            
+        	<compiler.library-path dir="${testlib.dir}" append="true">
+                <include name="*.swc"/>
+            </compiler.library-path>
+        	
+        	<compiler.verbose-stacktraces>true</compiler.verbose-stacktraces>
+            <compiler.headless-server>true</compiler.headless-server>
+        </mxmlc>
+    </target>	
+	
+    <target name="executeTestRunner" depends="compileTestRunner">
+    	<flexunit swf="${testbox.dir}/runner.swf"
+            toDir="${testbox.dir}"
+            haltonfailure="false"
+            verbose="true"
+            localTrusted="true"/>
+    </target>	
+
+    <target name="cleanASDoc">
+        <delete dir="${asdoc.dir}" failOnError="false" includeEmptyDirs="true" />
+        <mkdir dir="${asdoc.dir}" />
+    </target>
+	
+    <target name="compileASDoc">
+        <exec executable="${FLEX_HOME}/bin/asdoc.exe" failonerror="true">
+            <arg line="-source-path '${src.dir}'" />
+            <arg line="-source-path 'C:\Program Files\Adobe\Adobe Flash Builder 4\sdks\4.0.0\frameworks\projects\framework\src\'" />
+            <arg line="-doc-classes ${appClasses}" />
+            <arg line="-exclude-dependencies" />
+            <arg line="-main-title 'as3CollectionUtils'" />
+            <arg line="-window-title 'as3CollectionUtils'" />
+            <arg line="-output '${asdoc.dir}'" />
+            <arg line="-footer 'Footer'" />
+        </exec>
+    </target>
+
+	<target name="asDocs" depends="cleanASDoc, compileASDoc" description="build of asdocs" />
+	
+    <target name="build" depends="compile, asDocs" />
+ 
+</project>

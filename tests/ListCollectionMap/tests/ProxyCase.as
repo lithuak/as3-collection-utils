@@ -1,4 +1,4 @@
-package tests.ListCollectionMap.tests
+package ListCollectionMap.tests
 {
 	import flash.utils.flash_proxy;
 	
@@ -7,7 +7,7 @@ package tests.ListCollectionMap.tests
 	import org.flexunit.assertThat;
 	import org.hamcrest.collection.array;
 	
-	import tests.ListCollectionMap.LCMTestEnvironment;
+	import ListCollectionMap.LCMTestEnvironment;
 
 	public class ProxyCase extends LCMTestEnvironment
 	{

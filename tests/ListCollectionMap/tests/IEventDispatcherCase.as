@@ -1,4 +1,4 @@
-package tests.ListCollectionMap.tests
+package ListCollectionMap.tests
 {
 	import flash.events.Event;
 	
@@ -6,7 +6,7 @@ package tests.ListCollectionMap.tests
 	
 	import org.flexunit.async.Async;
 	
-	import tests.ListCollectionMap.LCMTestEnvironment;
+	import ListCollectionMap.LCMTestEnvironment;
 
 	public class IEventDispatcherCase extends LCMTestEnvironment
 	{
