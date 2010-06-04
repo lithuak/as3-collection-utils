@@ -1,0 +1,43 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><!-- saved from url=(0014)about:internet --><html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" href="../../../style.css" type="text/css" media="screen"><link rel="stylesheet" href="../../../print.css" type="text/css" media="print"><link rel="stylesheet" href="../../../override.css" type="text/css"><meta name="keywords" content="ICollectionMap,com.oitar.collections.ICollectionMap,ILLEGAL_OP_MSG,length,list,mapFunction,mapFunction,addEventListener,addItem,addItemAt,dispatchEvent,fromArray,getItemAt,getItemIndex,hasEventListener,initialized,itemUpdated,refresh,refresh,removeAll,removeEventListener,removeItemAt,setItemAt,setProperty,toArray,willTrigger"><title>com.oitar.collections.ICollectionMap</title></head><body><script language="javascript" type="text/javascript" src="../../../asdoc.js"></script><script language="javascript" type="text/javascript" src="../../../help.js"></script><script language="javascript" type="text/javascript" src="../../../cookies.js"></script><script language="javascript" type="text/javascript"><!--
+				asdocTitle = 'ICollectionMap - as3CollectionUtils';
+				var baseRef = '../../../';
+				window.onload = configPage;
+			--></script>
+<script type="text/javascript">
+			scrollToNameAnchor();
+		</script><table class="titleTable" cellpadding="0" cellspacing="0" id="titleTable" style="display:none"><tr><td class="titleTableTitle" align="left">as3CollectionUtils</td><td class="titleTableTopNav" align="right"><a href="../../../package-summary.html" onclick="loadClassListFrame('../../../all-classes.html')">All Packages</a>&nbsp;|&nbsp;<a href="../../../class-summary.html" onclick="loadClassListFrame('../../../all-classes.html')">All Classes</a>&nbsp;|&nbsp;<a href="../../../all-index-A.html" onclick="loadClassListFrame('../../../index-list.html')">Index</a>&nbsp;|&nbsp;<a id="framesLink1" href="../../../index.html?com/oitar/collections/ICollectionMap.html&amp;com/oitar/collections/class-list.html">Frames</a><a id="noFramesLink1" style="display:none" href="" onclick="parent.location=document.location"> No Frames </a></td><td class="titleTableLogo" align="right" rowspan="3"><img src="../../../images/logo.jpg" class="logoImage" alt=" Adobe Logo " title=" Adobe Logo "></td></tr><tr class="titleTableRow2"><td class="titleTableSubTitle" id="subTitle" align="left">ICollectionMap</td><td class="titleTableSubNav" id="subNav" align="right"><a href="#propertySummary">Properties</a>&nbsp;| <a href="#methodSummary">Methods</a>&nbsp;| <a href="#eventSummary">Events</a></td></tr><tr class="titleTableRow3"><td colspan="3">&nbsp;</td></tr></table><script language="javascript" type="text/javascript" xml:space="preserve">
+				<!--
+				
+					if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("ICollectionMap"); titleBar_setSubNav(false,true,false,false,false,false,true,false,true,false,false	,false,false,false,false,false);}	
+				-->
+			</script><div xmlns:fn="http://www.w3.org/2005/xpath-functions" class="MainContent"><table class="classHeaderTable" cellpadding="0" cellspacing="0"><tr><td class="classHeaderTableLabel">Package</td><td><a href="package-detail.html" onclick="javascript:loadClassListFrame('class-list.html')">com.oitar.collections</a></td></tr><tr><td class="classHeaderTableLabel">Interface</td><td class="classSignature">public  interface  ICollectionMap</td></tr><tr><td class="classHeaderTableLabel">Implementors</td><td> <a href="../../../com/oitar/collections/ListCollectionMap.html">ListCollectionMap</a></td></tr></table><p></p><p></p><p></p>
+ 
+ The ICollectionMap is a mapping of a collection of data.
+ 
+ <p></p><br/><hr></div><a name="propertySummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Properties</div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableProperty"><tr><th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a href="#mapFunction" class="signatureLink">mapFunction</a> : Function<div class="summaryTableDescription">
+	 A function that is applied to each item to perform
+	 an actual mapping.</div></td><td class="summaryTableOwnerCol">ICollectionMap</td></tr></table></div><a name="methodSummary"></a><div class="summarySection"><div class="summaryTableTitle">Public Methods </div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableMethod"><tr><th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#refresh()" class="signatureLink">refresh</a>():void</div><div class="summaryTableDescription">
+	 Clears resulting collection and creates it from scratch
+	 </div></td><td class="summaryTableOwnerCol">ICollectionMap</td></tr></table></div><a name="eventSummary"></a><div class="summarySection"><div class="summaryTableTitle">Events</div><table cellspacing="0" cellpadding="3" class="summaryTable " id="summaryTableEvent"><tr><th>&nbsp;</th><th colspan="2">Event</th><th> Summary </th><th class="summaryTableOwnerCol">Defined By</th></tr><tr class=""><td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><div class="summarySignature"><a href="#event:collectionChange" class="signatureLink">collectionChange</a></div></td><td class="summaryTableDescription summaryTableCol">Dispatched when the ICollectionView has been updated in some way.</td><td class="summaryTableOwnerCol">ICollectionMap</td></tr></table></div><script language="javascript" type="text/javascript"><!--
+										showHideInherited();
+										--></script><div class="MainContent"><div class="detailSectionHeader">Property Detail</div><a name="propertyDetail"></a><a name="mapFunction"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">mapFunction</td><td class="detailHeaderType">property</td></tr></table><div class="detailBody"><code>mapFunction:Function</code><p></p><p></p><p>
+	 A function that is applied to each item to perform
+	 an actual mapping.
+	 
+	 A mapFunction is expected to have the following signature:
+	 
+	 <pre>f(item:Object):Object</pre>
+	 
+	 where the return value is any object for one-to-one mapping
+	 or ListCollectionViewResult instance for one-to-many mapping.
+	 
+	 The mapping function is mandatory and must be specified when
+	 calling the constructor. Later it can be changed by setting this
+	 property.
+	 
+	 </p><br/><span class="label"> Implementation </span><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function get mapFunction():Function</code><br/><code>&nbsp;&nbsp;&nbsp;&nbsp;public function set mapFunction(value:Function):void</code><br/></div><a name="methodDetail"></a><div class="detailSectionHeader">Method Detail</div><a name="refresh()"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">refresh</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td></tr></table><div class="detailBody"><code> public function refresh():void</code><p></p><p></p><p>
+	 Clears resulting collection and creates it from scratch
+	 </p></div><div class="detailSectionHeader"> Event Detail </div><a name="event:collectionChange"></a><table class="detailHeader" cellpadding="0" cellspacing="0"><tr><td class="detailHeaderName">collectionChange</td><td class="detailHeaderType"> Event </td></tr></table><div class="detailBody"><span class="label">Event Object Type: </span><code>mx.events.CollectionEvent</code><br/><span class="label">CollectionEvent.type property = </span><code>mx.events.CollectionEvent.COLLECTION_CHANGE</code><br/><p></p><p></p><p>
+  Dispatched when the ICollectionView has been updated in some way.
+ 
+  </p></div><br/><br/><hr><br/><p></p><center class="copyright"><footer>Footer</footer><br/>Fri Jun 4 2010, 08:07 PM +03:00  </center></div></body></html><!--Footer<br/>Fri Jun 4 2010, 08:07 PM +03:00  -->
